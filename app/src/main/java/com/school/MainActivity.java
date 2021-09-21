@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.students_btn:
 
-                Intent studentsIntent = new Intent(this, ResultsActivity.class);
+                Intent studentsIntent = new Intent(this, StudentsActivity.class);
                 startActivity(studentsIntent);
                 break;
 
