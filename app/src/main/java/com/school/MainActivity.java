@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         studentsBtn = findViewById(R.id.students_btn);
 
         resultsBtn.setOnClickListener(this);
+        studentsBtn.setOnClickListener(this);
     }
 
     @Override
