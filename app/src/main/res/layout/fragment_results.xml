@@ -21,7 +21,7 @@
         android:orientation="vertical">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/fragment_main_recycler_view"
+            android:id="@+id/fragment_main_courses_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:listitem="@layout/fragment_course_item" />

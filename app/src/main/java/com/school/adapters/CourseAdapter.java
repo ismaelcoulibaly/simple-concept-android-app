@@ -1,4 +1,4 @@
-package com.school.adapter;
+package com.school.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,7 +13,7 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.school.R;
-import com.school.model.Course;
+import com.school.models.Course;
 
 import java.util.List;
 
@@ -49,6 +49,7 @@ public class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.CourseView
     public int getItemCount() {
         return this.coursesList.size();
     }
+
     public static class CourseViewHolder extends RecyclerView.ViewHolder{
 
         private TextView title;

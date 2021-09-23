@@ -5,20 +5,17 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.EditText;
 
-import com.school.adapter.CourseAdapter;
-import com.school.model.Course;
+import com.school.adapters.CourseAdapter;
+import com.school.models.Course;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ResultsActivity extends AppCompatActivity{
 
-    private List<Course> courses = new ArrayList<>();
     private RecyclerView recyclerView;
-    private EditText gradeEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +23,7 @@ public class ResultsActivity extends AppCompatActivity{
         setContentView(R.layout.activity_results);
 
         CourseAdapter courseAdapter = new CourseAdapter(getApplication());
-        recyclerView = findViewById(R.id.fragment_main_recycler_view);
+        recyclerView = findViewById(R.id.fragment_main_courses_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplication()));
 
         courseAdapter.addCourse(loadCourses());
