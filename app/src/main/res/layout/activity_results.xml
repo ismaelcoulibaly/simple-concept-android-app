@@ -9,8 +9,8 @@
     <fragment
         android:name="com.school.ResultsFragment"
         android:id="@+id/results_fragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         tools:ignore="MissingConstraints"></fragment>
 
 </RelativeLayout>

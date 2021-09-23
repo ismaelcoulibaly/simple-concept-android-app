@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent.putExtra(VALUE_HOLDER1, v1);
                 intent.putExtra(VALUE_HOLDER2, v2);*/
                 startActivity(resultsIntent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.no_animation);
 
                 break;
 
