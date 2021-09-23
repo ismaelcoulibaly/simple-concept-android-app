@@ -18,10 +18,37 @@
         android:textColor="@color/black"
         android:drawableBottom="@color/black"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fragment_main_students_recycler_view"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:listitem="@layout/student_item" />
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fragment_main_students_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/student_item" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/back_to_mainactivity_btn"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/back_icon"
+            android:text="Retour"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sf_pro_semibold_family_font"/>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import com.school.adapters.StudentAdapter;
@@ -14,9 +17,10 @@ import com.school.models.Student;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentsActivity extends AppCompatActivity {
+public class StudentsActivity extends AppCompatActivity implements View.OnClickListener{
 
     private RecyclerView recyclerView;
+    private Button backToMainActivityButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,10 +29,12 @@ public class StudentsActivity extends AppCompatActivity {
 
         StudentAdapter studentAdapter = new StudentAdapter(getApplication());
         recyclerView = findViewById(R.id.fragment_main_students_recycler_view);
+        backToMainActivityButton = findViewById(R.id.back_to_mainactivity_btn);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplication()));
 
         studentAdapter.addCourse(loadStudents());
         recyclerView.setAdapter(studentAdapter);
+        backToMainActivityButton.setOnClickListener(this);
     }
 
     private List<Student> loadStudents() {
@@ -47,5 +53,11 @@ public class StudentsActivity extends AppCompatActivity {
         studentsList.add(new Student("Elon Musk","MUSELO010198","01-01-1998",R.drawable.android_course_icon ));
 
         return studentsList;
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
