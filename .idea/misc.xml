@@ -8,8 +8,8 @@
         <entry key="app/src/main/res/layout/activity_students.xml" value="0.36186594202898553" />
         <entry key="app/src/main/res/layout/fragment_class_item.xml" value="0.36186594202898553" />
         <entry key="app/src/main/res/layout/fragment_course_item.xml" value="0.36186594202898553" />
-        <entry key="app/src/main/res/layout/fragment_results.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/student_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_results.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/student_item.xml" value="0.33" />
       </map>
     </option>
   </component>

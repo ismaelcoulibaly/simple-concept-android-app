@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/student_recyclerview_item"
+<RelativeLayout android:id="@+id/student_recyclerview_item"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mes cours"
+        android:fontFamily="@font/sf_pro_semibold_family_font"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:textColor="@color/black"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/student_cardview"
-        android:layout_height="match_parent"
-        android:layout_width="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:cardCornerRadius="15sp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -27,7 +36,7 @@
                     android:layout_marginLeft="15dp"
                     android:text="Title"
                     android:textSize="20sp"
-                    android:textColor="@color/white"
+                    android:textColor="#3C3C3C"
                     android:fontFamily="@font/sf_pro_semibold_family_font"
                     android:textStyle="bold"/>
 
