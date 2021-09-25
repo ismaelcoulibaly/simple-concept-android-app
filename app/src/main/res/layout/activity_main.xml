@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/main_text"
         android:layout_width="match_parent"
         android:layout_height="600dp"
         android:fontFamily="@font/sf_pro_semibold_family_font"
@@ -19,7 +19,7 @@
         android:textStyle="bold" />
 
     <LinearLayout
-        android:layout_below="@+id/text"
+        android:layout_below="@+id/main_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">

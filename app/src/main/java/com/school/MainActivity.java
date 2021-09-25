@@ -6,10 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
     private Button resultsBtn;
     private Button studentsBtn;
+    private TextView mainText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +21,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         resultsBtn = findViewById(R.id.results_btn);
         studentsBtn = findViewById(R.id.students_btn);
-
+        mainText = findViewById(R.id.main_text);
         resultsBtn.setOnClickListener(this);
         studentsBtn.setOnClickListener(this);
+
+        Intent intent = getIntent();
+        int average = intent.getIntExtra(ResultsActivity.RESULT_HOLDER,0);
+        mainText.setText("Votre moyenne est de :" + average);
+
     }
 
     @Override
@@ -30,11 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.results_btn:
 
                 Intent resultsIntent = new Intent(this, ResultsActivity.class);
-
-                /*int v1 = Integer.parseInt(edtext1.getText().toString().trim());
-                int v2 = Integer.parseInt(edtext2.getText().toString().trim());
-                intent.putExtra(VALUE_HOLDER1, v1);
-                intent.putExtra(VALUE_HOLDER2, v2);*/
                 startActivity(resultsIntent);
 
                 break;

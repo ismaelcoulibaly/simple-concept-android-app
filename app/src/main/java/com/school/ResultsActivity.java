@@ -2,6 +2,7 @@ package com.school;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 public class ResultsActivity extends AppCompatActivity{
 
+    public static final String RESULT_HOLDER ="average";
     private Button calculateAverage;
     private EditText mathsGradeEditText;
     private EditText htmlGradeEditText;
@@ -20,6 +22,7 @@ public class ResultsActivity extends AppCompatActivity{
     private EditText javaGradeEditText;
     private TextView averageTextView;
     int total = 0;
+    int average = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +96,7 @@ public class ResultsActivity extends AppCompatActivity{
             }
         });
 
-
+        Intent intent = new Intent(this, MainActivity.class);
 
         calculateAverage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,10 +106,16 @@ public class ResultsActivity extends AppCompatActivity{
                         + Integer.parseInt(androidGradeEditText.getText().toString())
                     + Integer.parseInt(javaGradeEditText.getText().toString());
 
-                int average = total / 4 ;
+                average = total / 4 ;
                 averageTextView.setText("Moyenne: "+ average);
+                intent.putExtra(RESULT_HOLDER, average);
+                startActivity(intent);
             }
         });
+
+
+
+
     }
 
 
