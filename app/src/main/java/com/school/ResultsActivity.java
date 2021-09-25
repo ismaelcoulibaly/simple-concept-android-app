@@ -32,10 +32,10 @@ public class ResultsActivity extends AppCompatActivity{
 
     private List<Course> loadCourses() {
         List<Course> coursesList= new ArrayList<>();
-        coursesList.add(new Course("Mathématiques","Entrez une nouvelle note: ",R.drawable.maths_course_icon ));
-        coursesList.add(new Course("Android","Entrez une nouvelle note: ",R.drawable.android_course_icon ));
-        coursesList.add(new Course("HTML","Entrez une nouvelle note: ",R.drawable.html_course_icon ));
-        coursesList.add(new Course("JAVA","Entrez une nouvelle note: ",R.drawable.java_course_icon ));
+        coursesList.add(new Course("Mathématiques",0,R.drawable.maths_course_icon ));
+        coursesList.add(new Course("Android",0,R.drawable.android_course_icon ));
+        coursesList.add(new Course("HTML",0,R.drawable.html_course_icon ));
+        coursesList.add(new Course("JAVA",0,R.drawable.java_course_icon ));
 
         return coursesList;
     }
