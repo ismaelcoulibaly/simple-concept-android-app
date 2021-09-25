@@ -11,6 +11,7 @@
         android:id="@+id/results_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:ignore="MissingConstraints"></fragment>
+        tools:ignore="MissingConstraints"
+        tools:layout="@layout/fragment_results"></fragment>
 
 </RelativeLayout>

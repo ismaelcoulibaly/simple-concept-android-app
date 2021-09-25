@@ -17,20 +17,179 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:orientation="vertical">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/fragment_main_courses_recycler_view"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:listitem="@layout/fragment_course_item" />
+            android:background="@color/grey">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/maths_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Mathématiques"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/sf_pro_semibold_family_font"/>
+
+                <EditText
+                    android:id="@+id/maths_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:inputType="numberSigned"
+                    android:hint="Appuyez ici pour entrer une note"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sf_pro_semibold_family_font"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/maths_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/maths_course_icon"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+         <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/html_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Html"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/sf_pro_semibold_family_font"/>
+
+                <EditText
+                    android:id="@+id/html_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:inputType="numberSigned"
+                    android:hint="Appuyez ici pour entrer une note"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sf_pro_semibold_family_font"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/course_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/html_course_icon"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/android_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Android"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/sf_pro_semibold_family_font"/>
+
+                <EditText
+                    android:id="@+id/android_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:inputType="numberSigned"
+                    android:hint="Appuyez ici pour entrer une note"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sf_pro_semibold_family_font"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/android_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/android_course_icon"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/java_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="JAVA"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/sf_pro_semibold_family_font"/>
+
+                <EditText
+                    android:id="@+id/java_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:inputType="numberSigned"
+                    android:hint="Appuyez ici pour entrer une note"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sf_pro_semibold_family_font"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/java_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/java_course_icon"/>
+
+        </RelativeLayout>
+
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3"
+        android:layout_weight="4"
         android:orientation="vertical" >
 
         <Button
@@ -39,9 +198,19 @@
             android:layout_height="70dp"
             android:layout_gravity="center"
             android:layout_margin="30dp"
-            android:text="Retourner résultats"
+            android:drawableLeft="@drawable/back_icon"
+            android:text="Afficher moyenne"
             android:textColor="@color/white"
             android:fontFamily="@font/sf_pro_semibold_family_font"/>
+
+        <TextView
+            android:id="@+id/average_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Moyenne: "
+            android:gravity="center"
+            android:fontFamily="@font/sf_pro_semibold_family_font"
+            android:textStyle="bold"/>
 
     </LinearLayout>
 

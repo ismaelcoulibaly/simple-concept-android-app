@@ -5,39 +5,37 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.school.adapters.CourseAdapter;
-import com.school.models.Course;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ResultsActivity extends AppCompatActivity{
 
-    private RecyclerView recyclerView;
+    private Button calculateAverage;
+    private EditText mathsGradeEditText;
+    private EditText htmlGradeEditText;
+    private EditText androidGradeEditText;
+    private EditText javaGradeEditText;
+    private TextView averageTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
-        CourseAdapter courseAdapter = new CourseAdapter(getApplication());
-        recyclerView = findViewById(R.id.fragment_main_courses_recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getApplication()));
+        calculateAverage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        courseAdapter.addCourse(loadCourses());
-        recyclerView.setAdapter(courseAdapter);
+            }
+        });
     }
 
-    private List<Course> loadCourses() {
-        List<Course> coursesList= new ArrayList<>();
-        coursesList.add(new Course("Mathématiques",0,R.drawable.maths_course_icon ));
-        coursesList.add(new Course("Android",0,R.drawable.android_course_icon ));
-        coursesList.add(new Course("HTML",0,R.drawable.html_course_icon ));
-        coursesList.add(new Course("JAVA",0,R.drawable.java_course_icon ));
-
-        return coursesList;
-    }
 
 }

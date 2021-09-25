@@ -8,10 +8,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 
 import com.school.adapters.StudentAdapter;
-import com.school.models.Course;
 import com.school.models.Student;
 
 import java.util.ArrayList;
