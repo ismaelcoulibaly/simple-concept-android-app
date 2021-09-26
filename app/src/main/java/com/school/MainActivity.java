@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button resultsBtn;
     private Button studentsBtn;
     private TextView mainText;
+    int average = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +26,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         resultsBtn.setOnClickListener(this);
         studentsBtn.setOnClickListener(this);
 
-        Intent intent = getIntent();
-        int average = intent.getIntExtra(ResultsActivity.RESULT_HOLDER,0);
-        mainText.setText("Votre moyenne est de :" + average);
+        Intent resultIntent = getIntent();//intent provenant de le l'activité de la moyenne
+        average = resultIntent.getIntExtra(ResultsActivity.RESULT_HOLDER,0);
+
+        if (average != 0){
+            mainText.setText("Votre moyenne est de :" + average);
+        }
 
     }
 
@@ -46,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 Intent studentsIntent = new Intent(this, StudentsActivity.class);
                 startActivity(studentsIntent);
+
                 break;
 
 

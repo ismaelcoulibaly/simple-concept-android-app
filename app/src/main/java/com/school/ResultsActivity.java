@@ -22,7 +22,7 @@ public class ResultsActivity extends AppCompatActivity{
     private EditText javaGradeEditText;
     private TextView averageTextView;
     int total = 0;
-    int average = 0;
+    public int average = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +39,7 @@ public class ResultsActivity extends AppCompatActivity{
         mathsGradeEditText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                if(s.toString().isEmpty()){s = "0";}
             }
 
             @Override
@@ -101,6 +102,11 @@ public class ResultsActivity extends AppCompatActivity{
         calculateAverage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(mathsGradeEditText.getText().toString().isEmpty()){mathsGradeEditText.setText("0");}//si les champs ne sont pas cliqués, on leur attribue la valeur 0
+                if(androidGradeEditText.getText().toString().isEmpty()){androidGradeEditText.setText("0");}
+                if(javaGradeEditText.getText().toString().isEmpty()){javaGradeEditText.setText("0");}
+                if(htmlGradeEditText.getText().toString().isEmpty()){htmlGradeEditText.setText("0");}
+
                 total = Integer.parseInt(mathsGradeEditText.getText().toString())
                         + Integer.parseInt(htmlGradeEditText.getText().toString())
                         + Integer.parseInt(androidGradeEditText.getText().toString())
